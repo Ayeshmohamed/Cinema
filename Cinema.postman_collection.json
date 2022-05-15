@@ -1,0 +1,851 @@
+{
+	"info": {
+		"_postman_id": "c0e891a9-831f-42ca-bff8-982e60e44b72",
+		"name": "Cinema",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Mohamed\",\n    \"email\":\"ayesh8@gmail.com\",\n    \"password\":\"12345678\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/auth/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"ayesh8@gmail.com\",\n    \"password\":\"12345678\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Halls",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDUwODk3ZTkyMThjNDQ2MjZhNWQ0OTkwZWM3ZDI5NmNlMDhiZDYyMDI0NjAyZmVjODAwZmQ0ZTU3MmM3NTVjMDM1YWFjM2YxMmI3ZTE4ZjciLCJpYXQiOjE2NTI0MzMwMjcuOTYzNDUsIm5iZiI6MTY1MjQzMzAyNy45NjM0NTMsImV4cCI6MTY2ODMzMDYyNy45NTY4MDMsInN1YiI6IjkiLCJzY29wZXMiOltdfQ.cTlAKLIWDvJ4ScytbLisuTINW0O8caR4l1JOIdJbWV0TkdvrYMs1RQOj7_24L6Vsa7IfTj10qgEwcVNfbUeOWVI1_dPtwEDmRRdxSJoayLGdglEiGTafj--BvlUm_hecxIAVtWf_O-JBPi5ysPsU1ZgFADizbEnyAzxZKiof25NxbkVCT7qGPVUJbU6KEoQblJz2RMtoHXUfa3WDpzSaQ_Qp14j1zy7bejadMsaWhDCHY7nFXvegkKqEyfoQnqn40FwHdjRF0LPKidQ1yqyFYvZNA3WvgYtPGvh4oltkVimDVcvg1s7YbEZ2z1Q8nDtoK5HUBKoWj5JM6t-kuRGowyw0-oOXaSM_xGi7RmzIbQ49Q01tY0kcAEBhZ4xnAwFV7Mx_89h1-dOsMuqrfoifJ9SFQzRzFcr1dEqjvVaEnNl9g-ITRD33bdQXcL3W2NgWbhnm0ZNlXZDGxQUA8LdZvwzE6VdE4cezWghBXFbg7GngSuubBUxaWH9SejI8CAsU_qJl0cPLEhudckpirauCWDwcOrUNml6J_TPnZARE-hSKG0es9OVnJD_LpPJFrfT_DbuLt-QogD46vn5MoFWUy17Mwx_0Tp2F-DA8ru_SfgDfXdhdHMwydWsdCLKnRpMs271YuueUEBnfZpuPYAwCycxQvI6YX3NB2EslhGCPBgw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/halls",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"halls"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDUwODk3ZTkyMThjNDQ2MjZhNWQ0OTkwZWM3ZDI5NmNlMDhiZDYyMDI0NjAyZmVjODAwZmQ0ZTU3MmM3NTVjMDM1YWFjM2YxMmI3ZTE4ZjciLCJpYXQiOjE2NTI0MzMwMjcuOTYzNDUsIm5iZiI6MTY1MjQzMzAyNy45NjM0NTMsImV4cCI6MTY2ODMzMDYyNy45NTY4MDMsInN1YiI6IjkiLCJzY29wZXMiOltdfQ.cTlAKLIWDvJ4ScytbLisuTINW0O8caR4l1JOIdJbWV0TkdvrYMs1RQOj7_24L6Vsa7IfTj10qgEwcVNfbUeOWVI1_dPtwEDmRRdxSJoayLGdglEiGTafj--BvlUm_hecxIAVtWf_O-JBPi5ysPsU1ZgFADizbEnyAzxZKiof25NxbkVCT7qGPVUJbU6KEoQblJz2RMtoHXUfa3WDpzSaQ_Qp14j1zy7bejadMsaWhDCHY7nFXvegkKqEyfoQnqn40FwHdjRF0LPKidQ1yqyFYvZNA3WvgYtPGvh4oltkVimDVcvg1s7YbEZ2z1Q8nDtoK5HUBKoWj5JM6t-kuRGowyw0-oOXaSM_xGi7RmzIbQ49Q01tY0kcAEBhZ4xnAwFV7Mx_89h1-dOsMuqrfoifJ9SFQzRzFcr1dEqjvVaEnNl9g-ITRD33bdQXcL3W2NgWbhnm0ZNlXZDGxQUA8LdZvwzE6VdE4cezWghBXFbg7GngSuubBUxaWH9SejI8CAsU_qJl0cPLEhudckpirauCWDwcOrUNml6J_TPnZARE-hSKG0es9OVnJD_LpPJFrfT_DbuLt-QogD46vn5MoFWUy17Mwx_0Tp2F-DA8ru_SfgDfXdhdHMwydWsdCLKnRpMs271YuueUEBnfZpuPYAwCycxQvI6YX3NB2EslhGCPBgw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"C5\",\n    \"description\":\"C3 Hall\",\n    \"number_of_seets\":50\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/halls/store",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"halls",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDUwODk3ZTkyMThjNDQ2MjZhNWQ0OTkwZWM3ZDI5NmNlMDhiZDYyMDI0NjAyZmVjODAwZmQ0ZTU3MmM3NTVjMDM1YWFjM2YxMmI3ZTE4ZjciLCJpYXQiOjE2NTI0MzMwMjcuOTYzNDUsIm5iZiI6MTY1MjQzMzAyNy45NjM0NTMsImV4cCI6MTY2ODMzMDYyNy45NTY4MDMsInN1YiI6IjkiLCJzY29wZXMiOltdfQ.cTlAKLIWDvJ4ScytbLisuTINW0O8caR4l1JOIdJbWV0TkdvrYMs1RQOj7_24L6Vsa7IfTj10qgEwcVNfbUeOWVI1_dPtwEDmRRdxSJoayLGdglEiGTafj--BvlUm_hecxIAVtWf_O-JBPi5ysPsU1ZgFADizbEnyAzxZKiof25NxbkVCT7qGPVUJbU6KEoQblJz2RMtoHXUfa3WDpzSaQ_Qp14j1zy7bejadMsaWhDCHY7nFXvegkKqEyfoQnqn40FwHdjRF0LPKidQ1yqyFYvZNA3WvgYtPGvh4oltkVimDVcvg1s7YbEZ2z1Q8nDtoK5HUBKoWj5JM6t-kuRGowyw0-oOXaSM_xGi7RmzIbQ49Q01tY0kcAEBhZ4xnAwFV7Mx_89h1-dOsMuqrfoifJ9SFQzRzFcr1dEqjvVaEnNl9g-ITRD33bdQXcL3W2NgWbhnm0ZNlXZDGxQUA8LdZvwzE6VdE4cezWghBXFbg7GngSuubBUxaWH9SejI8CAsU_qJl0cPLEhudckpirauCWDwcOrUNml6J_TPnZARE-hSKG0es9OVnJD_LpPJFrfT_DbuLt-QogD46vn5MoFWUy17Mwx_0Tp2F-DA8ru_SfgDfXdhdHMwydWsdCLKnRpMs271YuueUEBnfZpuPYAwCycxQvI6YX3NB2EslhGCPBgw"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":5,\n    \"name\":\"C5\",\n    \"description\":\"C3 Hall\",\n    \"number_of_seets\":50\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/halls/update",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"halls",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDUwODk3ZTkyMThjNDQ2MjZhNWQ0OTkwZWM3ZDI5NmNlMDhiZDYyMDI0NjAyZmVjODAwZmQ0ZTU3MmM3NTVjMDM1YWFjM2YxMmI3ZTE4ZjciLCJpYXQiOjE2NTI0MzMwMjcuOTYzNDUsIm5iZiI6MTY1MjQzMzAyNy45NjM0NTMsImV4cCI6MTY2ODMzMDYyNy45NTY4MDMsInN1YiI6IjkiLCJzY29wZXMiOltdfQ.cTlAKLIWDvJ4ScytbLisuTINW0O8caR4l1JOIdJbWV0TkdvrYMs1RQOj7_24L6Vsa7IfTj10qgEwcVNfbUeOWVI1_dPtwEDmRRdxSJoayLGdglEiGTafj--BvlUm_hecxIAVtWf_O-JBPi5ysPsU1ZgFADizbEnyAzxZKiof25NxbkVCT7qGPVUJbU6KEoQblJz2RMtoHXUfa3WDpzSaQ_Qp14j1zy7bejadMsaWhDCHY7nFXvegkKqEyfoQnqn40FwHdjRF0LPKidQ1yqyFYvZNA3WvgYtPGvh4oltkVimDVcvg1s7YbEZ2z1Q8nDtoK5HUBKoWj5JM6t-kuRGowyw0-oOXaSM_xGi7RmzIbQ49Q01tY0kcAEBhZ4xnAwFV7Mx_89h1-dOsMuqrfoifJ9SFQzRzFcr1dEqjvVaEnNl9g-ITRD33bdQXcL3W2NgWbhnm0ZNlXZDGxQUA8LdZvwzE6VdE4cezWghBXFbg7GngSuubBUxaWH9SejI8CAsU_qJl0cPLEhudckpirauCWDwcOrUNml6J_TPnZARE-hSKG0es9OVnJD_LpPJFrfT_DbuLt-QogD46vn5MoFWUy17Mwx_0Tp2F-DA8ru_SfgDfXdhdHMwydWsdCLKnRpMs271YuueUEBnfZpuPYAwCycxQvI6YX3NB2EslhGCPBgw"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":5\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/halls/delete",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"halls",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Movies",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYWM1NTgzZmQ3ZDZlMmZiNGRhZmZhNWM2NzFmOGFlODM5YmNiZjRhYzIxZTFmNzAwYjc3OWM3NTgzZWU1YjZjMTdmODc3ZDU1ODVkN2VlOWQiLCJpYXQiOjE2NTI1NDgxMzEuNjIxOTYzLCJuYmYiOjE2NTI1NDgxMzEuNjIxOTcxLCJleHAiOjE2Njg0NDU3MzEuNjEzNDg1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.X9UovchD9mVsNICBNNG-naWYS0BSjWbisjPeQIvZyIgQaZIYZPSgrNPamRB0N2hsNhrn7wktVOBhFyDBZoT7KbydYTUkpBufczkY45cRhsrIOgd_6UvWAl3wxOJyi697q1ijjgsskCOy-vCEBA_hOioED0y1FU0V8vnncqAUlBWg3zIsqkRmylBk8xhkHDSLJQb_fBHBEZzZqyRNq4h7_t_dSxUSmfN-RbSVyimnEQ7HX7uLfXyL7IL-Y7xnwh0RdZLrluFKdl1X6X6HYs3yiUeJ_D2B5LfwBdiTy1UNAMxTNCwb3Vlo1qZIVrdnsyV5x9M8F_tc5Gu5KFeXtNrYo2GdDzuq6X5aMO4Z0xknqxlcASnItYiCalR8_9Q_jhK6EMjQ6PDejbfXakOMTnqPG-Y6QDGAqIffkOiohuGZkok4AwVCobSUP9aeFnmjq0oyirnGMClxEmkuAymxCUbIZpLXTV2yNRc1YL1WXzE2q-4JWhIZf7cnTCIHCSqZ_yd8Jsb34uF8-pI2ifljZ51kajJGligMCCYscP_1Y7frGWRTHuzy-Vqudq5DpBiVk55aesRz6GmFBDOb742Sb57z9SSFkm03b62SXKK9vOIVM_5NpF0EKA7Ta6ZPiB0Lk8ubLFm3gWla4R9hKxfwDw0GmWFl6yqLYQhg4WVIRI69VSQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/movies/all",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"movies",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYWM1NTgzZmQ3ZDZlMmZiNGRhZmZhNWM2NzFmOGFlODM5YmNiZjRhYzIxZTFmNzAwYjc3OWM3NTgzZWU1YjZjMTdmODc3ZDU1ODVkN2VlOWQiLCJpYXQiOjE2NTI1NDgxMzEuNjIxOTYzLCJuYmYiOjE2NTI1NDgxMzEuNjIxOTcxLCJleHAiOjE2Njg0NDU3MzEuNjEzNDg1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.X9UovchD9mVsNICBNNG-naWYS0BSjWbisjPeQIvZyIgQaZIYZPSgrNPamRB0N2hsNhrn7wktVOBhFyDBZoT7KbydYTUkpBufczkY45cRhsrIOgd_6UvWAl3wxOJyi697q1ijjgsskCOy-vCEBA_hOioED0y1FU0V8vnncqAUlBWg3zIsqkRmylBk8xhkHDSLJQb_fBHBEZzZqyRNq4h7_t_dSxUSmfN-RbSVyimnEQ7HX7uLfXyL7IL-Y7xnwh0RdZLrluFKdl1X6X6HYs3yiUeJ_D2B5LfwBdiTy1UNAMxTNCwb3Vlo1qZIVrdnsyV5x9M8F_tc5Gu5KFeXtNrYo2GdDzuq6X5aMO4Z0xknqxlcASnItYiCalR8_9Q_jhK6EMjQ6PDejbfXakOMTnqPG-Y6QDGAqIffkOiohuGZkok4AwVCobSUP9aeFnmjq0oyirnGMClxEmkuAymxCUbIZpLXTV2yNRc1YL1WXzE2q-4JWhIZf7cnTCIHCSqZ_yd8Jsb34uF8-pI2ifljZ51kajJGligMCCYscP_1Y7frGWRTHuzy-Vqudq5DpBiVk55aesRz6GmFBDOb742Sb57z9SSFkm03b62SXKK9vOIVM_5NpF0EKA7Ta6ZPiB0Lk8ubLFm3gWla4R9hKxfwDw0GmWFl6yqLYQhg4WVIRI69VSQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Movie 1 ",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Movie 1",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/ayesh/Downloads/1.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/movies/store",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"movies",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDUwODk3ZTkyMThjNDQ2MjZhNWQ0OTkwZWM3ZDI5NmNlMDhiZDYyMDI0NjAyZmVjODAwZmQ0ZTU3MmM3NTVjMDM1YWFjM2YxMmI3ZTE4ZjciLCJpYXQiOjE2NTI0MzMwMjcuOTYzNDUsIm5iZiI6MTY1MjQzMzAyNy45NjM0NTMsImV4cCI6MTY2ODMzMDYyNy45NTY4MDMsInN1YiI6IjkiLCJzY29wZXMiOltdfQ.cTlAKLIWDvJ4ScytbLisuTINW0O8caR4l1JOIdJbWV0TkdvrYMs1RQOj7_24L6Vsa7IfTj10qgEwcVNfbUeOWVI1_dPtwEDmRRdxSJoayLGdglEiGTafj--BvlUm_hecxIAVtWf_O-JBPi5ysPsU1ZgFADizbEnyAzxZKiof25NxbkVCT7qGPVUJbU6KEoQblJz2RMtoHXUfa3WDpzSaQ_Qp14j1zy7bejadMsaWhDCHY7nFXvegkKqEyfoQnqn40FwHdjRF0LPKidQ1yqyFYvZNA3WvgYtPGvh4oltkVimDVcvg1s7YbEZ2z1Q8nDtoK5HUBKoWj5JM6t-kuRGowyw0-oOXaSM_xGi7RmzIbQ49Q01tY0kcAEBhZ4xnAwFV7Mx_89h1-dOsMuqrfoifJ9SFQzRzFcr1dEqjvVaEnNl9g-ITRD33bdQXcL3W2NgWbhnm0ZNlXZDGxQUA8LdZvwzE6VdE4cezWghBXFbg7GngSuubBUxaWH9SejI8CAsU_qJl0cPLEhudckpirauCWDwcOrUNml6J_TPnZARE-hSKG0es9OVnJD_LpPJFrfT_DbuLt-QogD46vn5MoFWUy17Mwx_0Tp2F-DA8ru_SfgDfXdhdHMwydWsdCLKnRpMs271YuueUEBnfZpuPYAwCycxQvI6YX3NB2EslhGCPBgw"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":1,\n    \"name\":\"C5\",\n    \"description\":\"C3 Hall\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/movies/update",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"movies",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDUwODk3ZTkyMThjNDQ2MjZhNWQ0OTkwZWM3ZDI5NmNlMDhiZDYyMDI0NjAyZmVjODAwZmQ0ZTU3MmM3NTVjMDM1YWFjM2YxMmI3ZTE4ZjciLCJpYXQiOjE2NTI0MzMwMjcuOTYzNDUsIm5iZiI6MTY1MjQzMzAyNy45NjM0NTMsImV4cCI6MTY2ODMzMDYyNy45NTY4MDMsInN1YiI6IjkiLCJzY29wZXMiOltdfQ.cTlAKLIWDvJ4ScytbLisuTINW0O8caR4l1JOIdJbWV0TkdvrYMs1RQOj7_24L6Vsa7IfTj10qgEwcVNfbUeOWVI1_dPtwEDmRRdxSJoayLGdglEiGTafj--BvlUm_hecxIAVtWf_O-JBPi5ysPsU1ZgFADizbEnyAzxZKiof25NxbkVCT7qGPVUJbU6KEoQblJz2RMtoHXUfa3WDpzSaQ_Qp14j1zy7bejadMsaWhDCHY7nFXvegkKqEyfoQnqn40FwHdjRF0LPKidQ1yqyFYvZNA3WvgYtPGvh4oltkVimDVcvg1s7YbEZ2z1Q8nDtoK5HUBKoWj5JM6t-kuRGowyw0-oOXaSM_xGi7RmzIbQ49Q01tY0kcAEBhZ4xnAwFV7Mx_89h1-dOsMuqrfoifJ9SFQzRzFcr1dEqjvVaEnNl9g-ITRD33bdQXcL3W2NgWbhnm0ZNlXZDGxQUA8LdZvwzE6VdE4cezWghBXFbg7GngSuubBUxaWH9SejI8CAsU_qJl0cPLEhudckpirauCWDwcOrUNml6J_TPnZARE-hSKG0es9OVnJD_LpPJFrfT_DbuLt-QogD46vn5MoFWUy17Mwx_0Tp2F-DA8ru_SfgDfXdhdHMwydWsdCLKnRpMs271YuueUEBnfZpuPYAwCycxQvI6YX3NB2EslhGCPBgw"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":1\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/movies/delete",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"movies",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "HallMovies",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDUwODk3ZTkyMThjNDQ2MjZhNWQ0OTkwZWM3ZDI5NmNlMDhiZDYyMDI0NjAyZmVjODAwZmQ0ZTU3MmM3NTVjMDM1YWFjM2YxMmI3ZTE4ZjciLCJpYXQiOjE2NTI0MzMwMjcuOTYzNDUsIm5iZiI6MTY1MjQzMzAyNy45NjM0NTMsImV4cCI6MTY2ODMzMDYyNy45NTY4MDMsInN1YiI6IjkiLCJzY29wZXMiOltdfQ.cTlAKLIWDvJ4ScytbLisuTINW0O8caR4l1JOIdJbWV0TkdvrYMs1RQOj7_24L6Vsa7IfTj10qgEwcVNfbUeOWVI1_dPtwEDmRRdxSJoayLGdglEiGTafj--BvlUm_hecxIAVtWf_O-JBPi5ysPsU1ZgFADizbEnyAzxZKiof25NxbkVCT7qGPVUJbU6KEoQblJz2RMtoHXUfa3WDpzSaQ_Qp14j1zy7bejadMsaWhDCHY7nFXvegkKqEyfoQnqn40FwHdjRF0LPKidQ1yqyFYvZNA3WvgYtPGvh4oltkVimDVcvg1s7YbEZ2z1Q8nDtoK5HUBKoWj5JM6t-kuRGowyw0-oOXaSM_xGi7RmzIbQ49Q01tY0kcAEBhZ4xnAwFV7Mx_89h1-dOsMuqrfoifJ9SFQzRzFcr1dEqjvVaEnNl9g-ITRD33bdQXcL3W2NgWbhnm0ZNlXZDGxQUA8LdZvwzE6VdE4cezWghBXFbg7GngSuubBUxaWH9SejI8CAsU_qJl0cPLEhudckpirauCWDwcOrUNml6J_TPnZARE-hSKG0es9OVnJD_LpPJFrfT_DbuLt-QogD46vn5MoFWUy17Mwx_0Tp2F-DA8ru_SfgDfXdhdHMwydWsdCLKnRpMs271YuueUEBnfZpuPYAwCycxQvI6YX3NB2EslhGCPBgw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/hall_movies",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"hall_movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDUwODk3ZTkyMThjNDQ2MjZhNWQ0OTkwZWM3ZDI5NmNlMDhiZDYyMDI0NjAyZmVjODAwZmQ0ZTU3MmM3NTVjMDM1YWFjM2YxMmI3ZTE4ZjciLCJpYXQiOjE2NTI0MzMwMjcuOTYzNDUsIm5iZiI6MTY1MjQzMzAyNy45NjM0NTMsImV4cCI6MTY2ODMzMDYyNy45NTY4MDMsInN1YiI6IjkiLCJzY29wZXMiOltdfQ.cTlAKLIWDvJ4ScytbLisuTINW0O8caR4l1JOIdJbWV0TkdvrYMs1RQOj7_24L6Vsa7IfTj10qgEwcVNfbUeOWVI1_dPtwEDmRRdxSJoayLGdglEiGTafj--BvlUm_hecxIAVtWf_O-JBPi5ysPsU1ZgFADizbEnyAzxZKiof25NxbkVCT7qGPVUJbU6KEoQblJz2RMtoHXUfa3WDpzSaQ_Qp14j1zy7bejadMsaWhDCHY7nFXvegkKqEyfoQnqn40FwHdjRF0LPKidQ1yqyFYvZNA3WvgYtPGvh4oltkVimDVcvg1s7YbEZ2z1Q8nDtoK5HUBKoWj5JM6t-kuRGowyw0-oOXaSM_xGi7RmzIbQ49Q01tY0kcAEBhZ4xnAwFV7Mx_89h1-dOsMuqrfoifJ9SFQzRzFcr1dEqjvVaEnNl9g-ITRD33bdQXcL3W2NgWbhnm0ZNlXZDGxQUA8LdZvwzE6VdE4cezWghBXFbg7GngSuubBUxaWH9SejI8CAsU_qJl0cPLEhudckpirauCWDwcOrUNml6J_TPnZARE-hSKG0es9OVnJD_LpPJFrfT_DbuLt-QogD46vn5MoFWUy17Mwx_0Tp2F-DA8ru_SfgDfXdhdHMwydWsdCLKnRpMs271YuueUEBnfZpuPYAwCycxQvI6YX3NB2EslhGCPBgw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"hall_id\": 4,\n    \"movie_id\": 2,\n    \"from_date\": \"2022-05-30 10:15\",\n    \"to_date\": \"2022-05-30 12:15\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/hall_movies/store",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"hall_movies",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDUwODk3ZTkyMThjNDQ2MjZhNWQ0OTkwZWM3ZDI5NmNlMDhiZDYyMDI0NjAyZmVjODAwZmQ0ZTU3MmM3NTVjMDM1YWFjM2YxMmI3ZTE4ZjciLCJpYXQiOjE2NTI0MzMwMjcuOTYzNDUsIm5iZiI6MTY1MjQzMzAyNy45NjM0NTMsImV4cCI6MTY2ODMzMDYyNy45NTY4MDMsInN1YiI6IjkiLCJzY29wZXMiOltdfQ.cTlAKLIWDvJ4ScytbLisuTINW0O8caR4l1JOIdJbWV0TkdvrYMs1RQOj7_24L6Vsa7IfTj10qgEwcVNfbUeOWVI1_dPtwEDmRRdxSJoayLGdglEiGTafj--BvlUm_hecxIAVtWf_O-JBPi5ysPsU1ZgFADizbEnyAzxZKiof25NxbkVCT7qGPVUJbU6KEoQblJz2RMtoHXUfa3WDpzSaQ_Qp14j1zy7bejadMsaWhDCHY7nFXvegkKqEyfoQnqn40FwHdjRF0LPKidQ1yqyFYvZNA3WvgYtPGvh4oltkVimDVcvg1s7YbEZ2z1Q8nDtoK5HUBKoWj5JM6t-kuRGowyw0-oOXaSM_xGi7RmzIbQ49Q01tY0kcAEBhZ4xnAwFV7Mx_89h1-dOsMuqrfoifJ9SFQzRzFcr1dEqjvVaEnNl9g-ITRD33bdQXcL3W2NgWbhnm0ZNlXZDGxQUA8LdZvwzE6VdE4cezWghBXFbg7GngSuubBUxaWH9SejI8CAsU_qJl0cPLEhudckpirauCWDwcOrUNml6J_TPnZARE-hSKG0es9OVnJD_LpPJFrfT_DbuLt-QogD46vn5MoFWUy17Mwx_0Tp2F-DA8ru_SfgDfXdhdHMwydWsdCLKnRpMs271YuueUEBnfZpuPYAwCycxQvI6YX3NB2EslhGCPBgw"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":2,\n    \"hall_id\": 2,\n    \"movie_id\": 2,\n    \"from_date\": \"2022-05-30 10:15\",\n    \"to_date\": \"2022-05-30 12:15\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/hall_movies/update",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"hall_movies",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDUwODk3ZTkyMThjNDQ2MjZhNWQ0OTkwZWM3ZDI5NmNlMDhiZDYyMDI0NjAyZmVjODAwZmQ0ZTU3MmM3NTVjMDM1YWFjM2YxMmI3ZTE4ZjciLCJpYXQiOjE2NTI0MzMwMjcuOTYzNDUsIm5iZiI6MTY1MjQzMzAyNy45NjM0NTMsImV4cCI6MTY2ODMzMDYyNy45NTY4MDMsInN1YiI6IjkiLCJzY29wZXMiOltdfQ.cTlAKLIWDvJ4ScytbLisuTINW0O8caR4l1JOIdJbWV0TkdvrYMs1RQOj7_24L6Vsa7IfTj10qgEwcVNfbUeOWVI1_dPtwEDmRRdxSJoayLGdglEiGTafj--BvlUm_hecxIAVtWf_O-JBPi5ysPsU1ZgFADizbEnyAzxZKiof25NxbkVCT7qGPVUJbU6KEoQblJz2RMtoHXUfa3WDpzSaQ_Qp14j1zy7bejadMsaWhDCHY7nFXvegkKqEyfoQnqn40FwHdjRF0LPKidQ1yqyFYvZNA3WvgYtPGvh4oltkVimDVcvg1s7YbEZ2z1Q8nDtoK5HUBKoWj5JM6t-kuRGowyw0-oOXaSM_xGi7RmzIbQ49Q01tY0kcAEBhZ4xnAwFV7Mx_89h1-dOsMuqrfoifJ9SFQzRzFcr1dEqjvVaEnNl9g-ITRD33bdQXcL3W2NgWbhnm0ZNlXZDGxQUA8LdZvwzE6VdE4cezWghBXFbg7GngSuubBUxaWH9SejI8CAsU_qJl0cPLEhudckpirauCWDwcOrUNml6J_TPnZARE-hSKG0es9OVnJD_LpPJFrfT_DbuLt-QogD46vn5MoFWUy17Mwx_0Tp2F-DA8ru_SfgDfXdhdHMwydWsdCLKnRpMs271YuueUEBnfZpuPYAwCycxQvI6YX3NB2EslhGCPBgw"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":1\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/hall_movies/delete",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"hall_movies",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Bookings",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDUwODk3ZTkyMThjNDQ2MjZhNWQ0OTkwZWM3ZDI5NmNlMDhiZDYyMDI0NjAyZmVjODAwZmQ0ZTU3MmM3NTVjMDM1YWFjM2YxMmI3ZTE4ZjciLCJpYXQiOjE2NTI0MzMwMjcuOTYzNDUsIm5iZiI6MTY1MjQzMzAyNy45NjM0NTMsImV4cCI6MTY2ODMzMDYyNy45NTY4MDMsInN1YiI6IjkiLCJzY29wZXMiOltdfQ.cTlAKLIWDvJ4ScytbLisuTINW0O8caR4l1JOIdJbWV0TkdvrYMs1RQOj7_24L6Vsa7IfTj10qgEwcVNfbUeOWVI1_dPtwEDmRRdxSJoayLGdglEiGTafj--BvlUm_hecxIAVtWf_O-JBPi5ysPsU1ZgFADizbEnyAzxZKiof25NxbkVCT7qGPVUJbU6KEoQblJz2RMtoHXUfa3WDpzSaQ_Qp14j1zy7bejadMsaWhDCHY7nFXvegkKqEyfoQnqn40FwHdjRF0LPKidQ1yqyFYvZNA3WvgYtPGvh4oltkVimDVcvg1s7YbEZ2z1Q8nDtoK5HUBKoWj5JM6t-kuRGowyw0-oOXaSM_xGi7RmzIbQ49Q01tY0kcAEBhZ4xnAwFV7Mx_89h1-dOsMuqrfoifJ9SFQzRzFcr1dEqjvVaEnNl9g-ITRD33bdQXcL3W2NgWbhnm0ZNlXZDGxQUA8LdZvwzE6VdE4cezWghBXFbg7GngSuubBUxaWH9SejI8CAsU_qJl0cPLEhudckpirauCWDwcOrUNml6J_TPnZARE-hSKG0es9OVnJD_LpPJFrfT_DbuLt-QogD46vn5MoFWUy17Mwx_0Tp2F-DA8ru_SfgDfXdhdHMwydWsdCLKnRpMs271YuueUEBnfZpuPYAwCycxQvI6YX3NB2EslhGCPBgw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/bookings",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDUwODk3ZTkyMThjNDQ2MjZhNWQ0OTkwZWM3ZDI5NmNlMDhiZDYyMDI0NjAyZmVjODAwZmQ0ZTU3MmM3NTVjMDM1YWFjM2YxMmI3ZTE4ZjciLCJpYXQiOjE2NTI0MzMwMjcuOTYzNDUsIm5iZiI6MTY1MjQzMzAyNy45NjM0NTMsImV4cCI6MTY2ODMzMDYyNy45NTY4MDMsInN1YiI6IjkiLCJzY29wZXMiOltdfQ.cTlAKLIWDvJ4ScytbLisuTINW0O8caR4l1JOIdJbWV0TkdvrYMs1RQOj7_24L6Vsa7IfTj10qgEwcVNfbUeOWVI1_dPtwEDmRRdxSJoayLGdglEiGTafj--BvlUm_hecxIAVtWf_O-JBPi5ysPsU1ZgFADizbEnyAzxZKiof25NxbkVCT7qGPVUJbU6KEoQblJz2RMtoHXUfa3WDpzSaQ_Qp14j1zy7bejadMsaWhDCHY7nFXvegkKqEyfoQnqn40FwHdjRF0LPKidQ1yqyFYvZNA3WvgYtPGvh4oltkVimDVcvg1s7YbEZ2z1Q8nDtoK5HUBKoWj5JM6t-kuRGowyw0-oOXaSM_xGi7RmzIbQ49Q01tY0kcAEBhZ4xnAwFV7Mx_89h1-dOsMuqrfoifJ9SFQzRzFcr1dEqjvVaEnNl9g-ITRD33bdQXcL3W2NgWbhnm0ZNlXZDGxQUA8LdZvwzE6VdE4cezWghBXFbg7GngSuubBUxaWH9SejI8CAsU_qJl0cPLEhudckpirauCWDwcOrUNml6J_TPnZARE-hSKG0es9OVnJD_LpPJFrfT_DbuLt-QogD46vn5MoFWUy17Mwx_0Tp2F-DA8ru_SfgDfXdhdHMwydWsdCLKnRpMs271YuueUEBnfZpuPYAwCycxQvI6YX3NB2EslhGCPBgw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"hall_id\": 1,\n    \"movie_id\": 2,\n    \"from_date\": \"2022-05-30 10:15\",\n    \"to_date\": \"2022-05-30 12:15\",\n    \"seet_number\":10\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/bookings/store",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"bookings",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDUwODk3ZTkyMThjNDQ2MjZhNWQ0OTkwZWM3ZDI5NmNlMDhiZDYyMDI0NjAyZmVjODAwZmQ0ZTU3MmM3NTVjMDM1YWFjM2YxMmI3ZTE4ZjciLCJpYXQiOjE2NTI0MzMwMjcuOTYzNDUsIm5iZiI6MTY1MjQzMzAyNy45NjM0NTMsImV4cCI6MTY2ODMzMDYyNy45NTY4MDMsInN1YiI6IjkiLCJzY29wZXMiOltdfQ.cTlAKLIWDvJ4ScytbLisuTINW0O8caR4l1JOIdJbWV0TkdvrYMs1RQOj7_24L6Vsa7IfTj10qgEwcVNfbUeOWVI1_dPtwEDmRRdxSJoayLGdglEiGTafj--BvlUm_hecxIAVtWf_O-JBPi5ysPsU1ZgFADizbEnyAzxZKiof25NxbkVCT7qGPVUJbU6KEoQblJz2RMtoHXUfa3WDpzSaQ_Qp14j1zy7bejadMsaWhDCHY7nFXvegkKqEyfoQnqn40FwHdjRF0LPKidQ1yqyFYvZNA3WvgYtPGvh4oltkVimDVcvg1s7YbEZ2z1Q8nDtoK5HUBKoWj5JM6t-kuRGowyw0-oOXaSM_xGi7RmzIbQ49Q01tY0kcAEBhZ4xnAwFV7Mx_89h1-dOsMuqrfoifJ9SFQzRzFcr1dEqjvVaEnNl9g-ITRD33bdQXcL3W2NgWbhnm0ZNlXZDGxQUA8LdZvwzE6VdE4cezWghBXFbg7GngSuubBUxaWH9SejI8CAsU_qJl0cPLEhudckpirauCWDwcOrUNml6J_TPnZARE-hSKG0es9OVnJD_LpPJFrfT_DbuLt-QogD46vn5MoFWUy17Mwx_0Tp2F-DA8ru_SfgDfXdhdHMwydWsdCLKnRpMs271YuueUEBnfZpuPYAwCycxQvI6YX3NB2EslhGCPBgw"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":2,\n    \"hall_id\": 2,\n    \"movie_id\": 2,\n    \"from_date\": \"2022-05-30 10:15\",\n    \"to_date\": \"2022-05-30 12:15\",\n    \"seet_number\":10\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/bookings/update",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"bookings",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDUwODk3ZTkyMThjNDQ2MjZhNWQ0OTkwZWM3ZDI5NmNlMDhiZDYyMDI0NjAyZmVjODAwZmQ0ZTU3MmM3NTVjMDM1YWFjM2YxMmI3ZTE4ZjciLCJpYXQiOjE2NTI0MzMwMjcuOTYzNDUsIm5iZiI6MTY1MjQzMzAyNy45NjM0NTMsImV4cCI6MTY2ODMzMDYyNy45NTY4MDMsInN1YiI6IjkiLCJzY29wZXMiOltdfQ.cTlAKLIWDvJ4ScytbLisuTINW0O8caR4l1JOIdJbWV0TkdvrYMs1RQOj7_24L6Vsa7IfTj10qgEwcVNfbUeOWVI1_dPtwEDmRRdxSJoayLGdglEiGTafj--BvlUm_hecxIAVtWf_O-JBPi5ysPsU1ZgFADizbEnyAzxZKiof25NxbkVCT7qGPVUJbU6KEoQblJz2RMtoHXUfa3WDpzSaQ_Qp14j1zy7bejadMsaWhDCHY7nFXvegkKqEyfoQnqn40FwHdjRF0LPKidQ1yqyFYvZNA3WvgYtPGvh4oltkVimDVcvg1s7YbEZ2z1Q8nDtoK5HUBKoWj5JM6t-kuRGowyw0-oOXaSM_xGi7RmzIbQ49Q01tY0kcAEBhZ4xnAwFV7Mx_89h1-dOsMuqrfoifJ9SFQzRzFcr1dEqjvVaEnNl9g-ITRD33bdQXcL3W2NgWbhnm0ZNlXZDGxQUA8LdZvwzE6VdE4cezWghBXFbg7GngSuubBUxaWH9SejI8CAsU_qJl0cPLEhudckpirauCWDwcOrUNml6J_TPnZARE-hSKG0es9OVnJD_LpPJFrfT_DbuLt-QogD46vn5MoFWUy17Mwx_0Tp2F-DA8ru_SfgDfXdhdHMwydWsdCLKnRpMs271YuueUEBnfZpuPYAwCycxQvI6YX3NB2EslhGCPBgw"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":1\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/bookings/delete",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"bookings",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}
