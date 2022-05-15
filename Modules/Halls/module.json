@@ -1,0 +1,14 @@
+{
+    "name": "Halls",
+    "alias": "halls",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Halls\\Providers\\HallsServiceProvider",
+        "Modules\\Halls\\Providers\\EventServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
