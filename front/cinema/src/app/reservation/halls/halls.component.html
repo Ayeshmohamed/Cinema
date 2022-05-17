@@ -1,0 +1,53 @@
+<div class="container mt-5">
+    <form action="" [formGroup]="filterForm">
+    <div class="row">
+            <div class="col-4">
+                <mat-form-field>
+                    <input matInput [ngxMatDatetimePicker]="from_datepicker" placeholder="From" formControlName="from_date">
+                    
+                    <mat-datepicker-toggle [for]="$any(from_datepicker)" matSuffix  ></mat-datepicker-toggle>
+                
+                    <ngx-mat-datetime-picker #from_datepicker></ngx-mat-datetime-picker>
+                </mat-form-field>
+            </div>
+            <div class="col-4">
+                <mat-form-field>
+                    <input matInput [ngxMatDatetimePicker]="to_datepicker" placeholder="To" formControlName="to_date">
+                    
+                    <mat-datepicker-toggle matSuffix [for]="$any(to_datepicker)" ></mat-datepicker-toggle>
+                
+                    <ngx-mat-datetime-picker #to_datepicker></ngx-mat-datetime-picker>
+                </mat-form-field>
+            </div>
+            <div class="col-4">
+                <button type="button" class="btn btn-primary" (click)="find()">Find</button>
+            </div>
+        </div>
+    </form>
+    <div *ngIf="message">
+        {{message}}
+    </div>
+    <div class="row my-3">
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item" *ngFor="let hall of halls;let i= index">
+              <h2 class="accordion-header" [id]="'heading'+i">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#c-'+i" aria-expanded="true" [attr.aria-controls]="'c'+i">
+                    {{hall.name}}  
+                </button>
+              </h2>
+              <div [id]="'c-'+i" class="accordion-collapse collapse show" [attr.aria-labelledby]="'heading'+i" [attr.data-bs-parent]="'#accordionExample'">
+                <div class="accordion-body">
+                    <div class="row">
+                        <div class="col-1 my-2" *ngFor="let seet of [].constructor(hall.number_of_seets);let j = index">
+                            <button type="button" class="btn" [class]="checkBooking(hall.bookings,j) ? 'btn-danger' : 'btn-success'" (click)="makeBooking(j,hall.id)">{{j+1}}</button>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+    </div>
+</div>

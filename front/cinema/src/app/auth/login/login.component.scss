@@ -1,0 +1,25 @@
+
+.error{
+    color: red;
+}
+.error-message{
+    color: white;
+    width: 100%;
+    background-color: red;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+}
+.success-message{
+    color: white;
+    width: 100%;
+    background-color: green;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+}
+.login-form{
+    margin: 35% auto;
+}

@@ -1,0 +1,68 @@
+<div class="container">
+  <div class="row">
+    <div class="mt-30 mt-lg-0">
+      <!--begin::Signin-->
+      <div class="login-form login-signin w-50">
+        <!--begin::Form-->
+        <form
+          (ngSubmit)="login()"
+          [formGroup]="authFrom"
+          class=""
+          id="kt_login_form"
+        >
+          <div class="error-message" *ngIf="error">{{ error }}</div>
+          <div class="success-message" *ngIf="message">
+            {{ message }}
+          </div>
+          <div class="">
+            <label for="email" class="font-size-h6 font-weight-bolder text-dark"
+              >Email</label
+            >
+            <input
+              type="email"
+              formControlName="email"
+              id="email"
+              class="form-control form-control-solid h-auto py-7 px-6 rounded-lg"
+            />
+            <span
+              class="error"
+              *ngIf="
+                authFrom.get('email')?.invalid && authFrom.get('email')?.touched
+              "
+              >Email required</span
+            >
+          </div>
+          <div class="">
+            <label for="" class="font-size-h6 font-weight-bolder text-dark"
+              >Password</label
+            >
+            <input
+              type="password"
+              formControlName="password"
+              class="form-control form-control-solid h-auto py-7 px-6 rounded-lg"
+            />
+            <span
+              class="error"
+              *ngIf="
+                authFrom.get('password')?.invalid &&
+                authFrom.get('password')?.touched
+              "
+              >Password required</span
+            >
+          </div>
+          <div class=" text-center">
+            <button
+              type="submit"
+              class="btn btn-dark font-weight-bolder font-size-h6 px-8 py-4 my-3"
+            >
+              Login
+            </button>
+          </div>
+          <!--end::Action-->
+        </form>
+        <!--end::Form-->
+      </div>
+      <!--end::Signin-->
+    </div>
+  </div>
+</div>
